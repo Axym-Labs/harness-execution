@@ -6,15 +6,15 @@ extension.
 
 ## Skills
 
-| Skill | Purpose |
-| --- | --- |
-| `execution-guidance` | Select lifecycle, execution pattern, interaction modifiers, and escalation policy. |
-| `supervising` | Establish ownership, reporting routes, and independent acceptance. |
-| `multi-step-execution` | Manage milestone-based delegated implementation. |
-| `autoresearch-loop` | Explore scientific premise-testable ideas or blind downstream-search candidates reproducibly. |
-| `exec-initiation` | Establish lean project-local specification and scaffolding. |
-| `exec-iteration` | Resume and improve existing project work. |
-| `exec-wrapup` | Clean, validate, document, package artifacts, and recommend publication paths. |
+| Source Skill | Visible Runtime Name | Purpose |
+| --- | --- | --- |
+| `execution-guidance` | `exec-guidance` | Select lifecycle, execution pattern, interaction modifiers, and escalation policy. |
+| `supervising` | `exec-supervising` | Establish ownership, reporting routes, and independent acceptance. |
+| `multi-step-execution` | `exec-multi-step` | Manage milestone-based delegated implementation. |
+| `autoresearch-loop` | `exec-autoresearch-loop` | Explore scientific premise-testable ideas or blind downstream-search candidates reproducibly. |
+| `exec-initiation` | `exec-initiation` | Establish lean project-local specification and scaffolding. |
+| `exec-iteration` | `exec-iteration` | Resume and improve existing project work. |
+| `exec-wrapup` | `exec-wrapup` | Clean, validate, document, package artifacts, and recommend publication paths. |
 
 `single-step-execution` is intentionally omitted: narrow work is covered
 directly by `execution-guidance` plus `supervising`, and the
@@ -28,6 +28,7 @@ successful runtime test.
 
 ## Integration
 
-The `kimi-claw` repository loads `skills/` from this sibling checkout through
-OpenClaw's `skills.load.extraDirs` setting. This repository stores no
-credentials or project-specific output.
+The `kimi-claw` repository generates full-content namespaced runtime copies
+from this sibling checkout and loads those through OpenClaw's
+`skills.load.extraDirs` setting. This repository stores no credentials or
+project-specific output.

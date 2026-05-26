@@ -6,16 +6,16 @@ description: Use for coding, research, or build execution to choose lifecycle st
 # Execution Guidance Skill
 
 ## Purpose
-Provide the decision framework for how to execute tasks: what pattern to use,
-how to behave when blocked, and when to escalate vs. self-resolve.
 
-## 0. This Is the Entrypoint
+Claw is the manager: it establishes objectives and acceptance criteria,
+delegates meaningful implementation or bounded analysis to appropriate
+workers, and independently verifies results before reporting success. It does
+not silently replace a worker on substantial delegated work merely because it
+could make edits itself.
 
-**Read this skill first** for coding, ML research, or build tasks. It is the
-source of truth for work-mode selection, project lifecycle, and escalation. If
-work is delegated, read
-`supervising` for role separation, route selection,
-notification, and acceptance responsibilities.
+Read this skill first for coding, ML research, or build tasks. It is the
+source of truth for project lifecycle, execution selection, interaction
+modifiers, and escalation.
 
 ### Reasoning Level
 
@@ -24,56 +24,44 @@ Use **high reasoning effort** by default for all delegated tasks. Both Kimi
 this. Do not downgrade reasoning unless the user explicitly requests a faster,
 cheaper mode.
 
-## 1. Choose a Work Mode
+## 1. Orient And Choose Execution
 
-Run this section before coding, research, or build execution.
+Use this procedure even when little is known about the project.
 
-### Routing Layers
+### Step 1: Locate State And Lifecycle
 
-The following layers are compatible; do not force them into one mutually
-exclusive choice:
+Identify the project directory from the request; when a new code project has
+no specified location, default to `~/main/code/<project-name>`. Before acting
+in an existing project, inspect the user request, `docs/spec.md`,
+`docs/progress.md`, `docs/worker-report.md` when delegated work may exist,
+`README.md`, and repository status as relevant.
 
-| Layer | Decision |
-|-------|----------|
-| Project lifecycle | Use Section 4 when initiating, iterating, or wrapping a project. |
-| Primary execution pattern | Choose one from the table below for how work runs. |
-| Domain overlay | Add `machine` or scientific skills when the domain requires them. |
-| Delegation contract | Load `supervising` whenever a worker or subagent is dispatched. |
+| Situation Found | What To Do | Lifecycle Skill |
+| --- | --- | --- |
+| Blank/new project or no `docs/spec.md` | Establish requirements and only the necessary scaffold before implementation. | `exec-initiation` |
+| Existing project with a new task, incomplete work, failing checks, or a resumed handoff | Read the specification and accepted progress, verify any worker report, then continue or correct the work. | `exec-iteration` |
+| Working project whose central work is done and needs evaluation, documentation, cleanup, or publication planning | Finalize defensibility, reproducibility, artifacts, and dissemination recommendations. | `exec-wrapup` |
 
-### Primary Execution Pattern
+### Step 2: Add Only Distinct Capabilities
 
-| Task Type | Pattern |
-|-----------|---------|
-| Long non-agent shell/I/O operation: download, installation, data preparation, export, sync, or ordinary build | `background-task-execution` |
-| Narrow implementation/review with clear acceptance checks and one worker run | Direct supervised execution using `supervising` when delegated |
-| Multi-phase implementation/review with milestones or broader risk | `multi-step-execution` |
-| Iterative idea testing or optimization with comparable outcomes, including scientific premise testing or blind downstream search such as hyperparameter tuning | `autoresearch-loop` |
+| Observed Need | Skill | Unique Ownership |
+| --- | --- | --- |
+| Any delegated worker or subagent | `supervising` | Worker scope, reporting route, acceptance boundary, and Claw's independent review. |
+| Long non-agent command such as a download, installation, export, sync, or build | `background-task-execution` | Non-blocking launch, bounded status checking, and completion handling. |
+| Multi-phase implementation or review with milestones or broader risk | `multi-step-execution` | Delegated phase and milestone flow. |
+| Comparable iterative idea testing, including scientific premise validation or blind downstream search such as hyperparameter tuning | `autoresearch-loop` | Experiment-loop regime, baseline comparison, keep/discard decisions, and safe parallel search. |
+| ML runs, datasets, or compute-heavy local work | `machine` | Machine-specific placement, bottleneck diagnosis, and throughput/parallelism measurement. |
+| Work intended to support a scientific or ML knowledge claim | `scientific-work` | Method validity, evidence boundaries, and claim discipline. |
+| One uncertain empirical premise requiring a baseline and controlled intervention | `test-hypothesis` | Faithful single-hypothesis comparison. |
 
-### Domain Overlays
+### Step 3: Execute Under The Contract
 
-| Condition | Add Skill |
-|-----------|-----------|
-| ML runs, datasets, or computationally heavy work on this machine | `machine` |
-| Scientific or ML work intended to support a knowledge claim | `scientific-work` |
-| One uncertain empirical comparison requiring a baseline and controlled intervention | `test-hypothesis` |
-
-### Rules For Selection
-
-1. Choose one primary execution pattern; add applicable domain overlays.
-2. Read `supervising` before dispatching a worker or subagent.
-3. If unsure between coding patterns, prefer `multi-step-execution`.
-4. Respect "no escalation" directives: if the user has forbidden escalating,
-   prefer patterns that allow self-correction (`autoresearch-loop`,
-   `multi-step-execution` with retries) over patterns that assume human
-   intervention on failure.
-
-### Cross-Cutting Boundaries
-
-- `background-task-execution` owns launch, status, and completion rules for
-  long non-agent commands.
-- `supervising` owns communication and acceptance rules for
-  workers and subagents.
-- Scientific overlay skills own experimental validity and claim boundaries.
+1. For narrow work that does not need a worker, execute directly and verify.
+2. Before dispatching meaningful work, load the delegation contract and give
+   the worker scope, acceptance checks, relevant files, and its report route.
+3. If unsure whether coding work needs phases, choose the multi-step path.
+4. Respect "no escalation" directives: use a self-correcting loop when
+   suitable rather than assuming human intervention after a failure.
 
 ---
 
@@ -179,23 +167,3 @@ escalation", report at milestones only.
 - Do not append anything when the run reveals no reusable harness lesson.
 
 ---
-
-## 4. Project Lifecycle Routing
-
-Use this section when a coding or research project is starting, stuck,
-pivoting, or nearing completion. Route to exactly one stage at a time; never
-skip stages.
-
-### Stages
-
-| Stage | Check | Skill |
-|-------|-------|-------|
-| Initiate | No `docs/spec.md` exists | `exec-initiation` |
-| Build | Spec exists, no working code | Pattern from Section 1 → delegate |
-| Iterate | Code exists, tests failing or blockers | `exec-iteration` |
-| Wrapup | Core done, needs evaluation/plots/docs | `exec-wrapup` |
-
-### Rules
-
-1. One stage at a time. Do not skip.
-2. Revisit exploration if iteration reveals the approach was wrong.
