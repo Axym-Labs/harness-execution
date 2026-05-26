@@ -17,7 +17,7 @@ Make the project defensible, reproducible, publishable, and easy to reuse.
   may include full-scale training/validation.
 - Generate plots or visualizations required to interpret or present results,
   storing deliverables and agent-produced artifacts in
-  `<project-dir>/docs/artifacts/`.
+  `<project-dir>/docs/<task-arc>/artifacts/`.
 - Add missing required metrics and reporting.
 - Write final README and documentation, including limitations and how claims
   are supported.
@@ -25,11 +25,12 @@ Make the project defensible, reproducible, publishable, and easy to reuse.
 - Use `capture-knowledge` to capture durable cross-project conclusions or
   research directions, linking to project artifacts rather than copying them
   into the vault.
-- Give the user a recommended numbered publishing/publicity plan appropriate
-  to the result. Consider, rather than automatically selecting: an article on
-  the personal website; an arXiv/preprint release for mature research; posts
-  on X and LinkedIn; and a dedicated project information website like the
-  paper companion websites referenced in the Kimi-Claw documentation.
+- Give the user a recommended numbered publishing/publicity plan whose scope
+  matches the size and maturity of the endeavor. A small internal result may
+  warrant a short visibility recommendation; a mature research contribution
+  may warrant an article on the personal website, arXiv/preprint release,
+  posts on X and LinkedIn, and a dedicated project information website like
+  the paper companion websites referenced in the Kimi-Claw documentation.
 
 ## Output
 

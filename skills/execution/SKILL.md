@@ -19,10 +19,12 @@ modifiers once implementation, repair, or validation is underway.
 - Project name or path from user input
 - Default lookup: `~/main/code/<project-name>`
 - Verify directory exists
-- Read `docs/spec.md` for requirements
-- Read `docs/exploration.md` for prior findings
-- Read `docs/progress.md` when it exists for durable execution results
-- Read `docs/worker-report.md` when delegated work used the worker-owned
+- Use the task arc selected by `entrypoint`; ensure its
+  `docs/<task-arc>/spec.md` and `progress.md` exist before any project work
+- Read `docs/<task-arc>/spec.md` for requirements
+- Read `docs/<task-arc>/exploration.md` when present for prior findings
+- Read `docs/<task-arc>/progress.md` for durable execution results
+- Read `docs/<task-arc>/worker-report.md` when delegated work used the worker-owned
   handoff fallback; verify it before accepting or transferring results
 - Read `README.md` for current state
 - Check `git status` / `git log --oneline -10`
@@ -34,9 +36,8 @@ modifiers once implementation, repair, or validation is underway.
 - Compare spec features against implementation
 - Check off completed items
 - Identify next milestone or blocker
-- For multi-phase builds, large refactors, or work expected to take more than
-  a few minutes, state milestones in `docs/spec.md` and decide whether Claw
-  should maintain `docs/progress.md` for verified outcomes.
+- State the next milestone in `docs/<task-arc>/spec.md` as needed and record
+  accepted material outcomes in `docs/<task-arc>/progress.md`.
 - Milestones record completed phases, meaningful verification, blockers, and
   final results, not a stream of command output.
 
@@ -60,8 +61,9 @@ modifiers once implementation, repair, or validation is underway.
 - For meaningful delegated work, apply `supervising` to define acceptance
   checks, worker scope, and notification route.
 - Follow `supervising` when selecting Codex or Kimi. For file-based delegated
-  work, ask the worker to maintain one worker-owned `docs/worker-report.md`
-  and send a completion notification with outcome, verification, and blockers.
+  work, ask the worker to maintain one worker-owned
+  `docs/<task-arc>/worker-report.md` and send a completion notification with
+  outcome, verification, and blockers.
 - Use `sessions_send` instead of the handoff file only after a live round-trip
   test has passed in the current runtime.
 - When resuming delegated work, check native session state and ask the worker
@@ -80,10 +82,10 @@ modifiers once implementation, repair, or validation is underway.
 
 ### 6. Record And Report
 
-- Update `docs/spec.md` with completed features
-- After checking evidence, update Claw-owned `docs/progress.md` with material
-  verified outcomes when progress is persisted.
-- Store generated project artifacts in `docs/artifacts/`; use
+- Update `docs/<task-arc>/spec.md` with completed requirements
+- After checking evidence, update Claw-owned `docs/<task-arc>/progress.md`
+  with material verified outcomes.
+- Store generated project artifacts in `docs/<task-arc>/artifacts/`; use
   `capture-knowledge` only for durable structured knowledge worth linking
   beyond project working state
 - Report start, meaningful milestones when requested, and final outcome.
@@ -138,26 +140,10 @@ deciding autonomously. If `no escalation` is present, it wins for escalation.
 - **Cheating**: do not drift from the agreed plan, replace hard requirements
   with easier proxies, or present simulated activity as verified progress.
 
-## Context Loading Priority
-
-1. `docs/spec.md`
-2. `docs/exploration.md`
-3. `docs/progress.md` (when present)
-4. `README.md`
-5. `git log --oneline -20`
-6. Native session state (if delegated work is running)
-7. TODO comments in code
-
-## Dead Code Removal
-
-```bash
-git rm <dead_files>
-git commit -m "chore: remove dead code after pivot"
-```
-
 ## Rules
 
-1. Always read `docs/spec.md` before making changes.
+1. Always read or establish the selected arc's `spec.md` and `progress.md`
+   before making changes.
 2. Never assume state from conversation alone.
 3. Commit at coherent verified milestones.
 4. Remove dead code promptly.

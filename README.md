@@ -19,9 +19,11 @@ extension.
 directly by `execution` plus `supervising`, and the
 former skill contained no domain-specific guidance.
 
-Delegated workers currently report through one worker-owned
-`docs/worker-report.md` file; Claw verifies it before recording accepted
-progress. A live OpenClaw `sessions_send` round trip on May 26, 2026 skipped
+Each coherent project objective uses a task arc under `docs/<task-arc>/` with
+required `spec.md` and `progress.md`. Delegated workers currently report
+through one worker-owned `docs/<task-arc>/worker-report.md` file; Claw
+verifies it before recording accepted progress. A live OpenClaw
+`sessions_send` round trip on May 26, 2026 skipped
 delivery, so session-message reporting remains conditional on a later
 successful runtime test.
 

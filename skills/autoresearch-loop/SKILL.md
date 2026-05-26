@@ -43,7 +43,7 @@ Examples:
 Evaluate each idea directly against the downstream objective and do not invent
 a proxy story after the fact. Blind evaluations are often independent; run
 them in parallel when resources, reproducibility, and the `machine` guidance
-permit. While the `docs/worker-report.md` fallback is active, one delegated
+permit. While the `docs/<task-arc>/worker-report.md` fallback is active, one delegated
 experiment worker must coordinate and aggregate parallel runs so that the
 handoff file has a single writer.
 
@@ -62,13 +62,13 @@ Apply `supervising` when dispatching an experiment worker.
    faithful rich feedback before running the downstream comparison. In the
    blind setting, define the downstream evaluation directly.
 3. Dispatch experiment workers under the supervision contract. Each worker
-   records its measurement in the worker-owned `docs/worker-report.md`
+   records its measurement in the worker-owned `docs/<task-arc>/worker-report.md`
    handoff unless a tested bidirectional session route has been configured.
 4. Arrange the configured completion route and return from an interactive
    initiating turn while the experiment runs.
 5. When each result arrives, inspect it, compare it with the baseline, log the
    decision in `.claw/experiments/results.tsv`, and record accepted durable
-   progress in `docs/progress.md` if useful.
+   progress in `docs/<task-arc>/progress.md`.
 6. Keep an improved change by committing it. Discard a non-improving change
    only inside the dedicated clean experiment branch/worktree and only after
    confirming there are no unrelated modifications.
@@ -86,6 +86,6 @@ Apply `supervising` when dispatching an experiment worker.
    richer faithful testing was available.
 4. Do not replace the downstream objective with an unfaithful proxy.
 5. Respect configured read-only files, compute capacity, and time budgets.
-6. Do not dispatch concurrent writers to `docs/worker-report.md`.
+6. Do not dispatch concurrent writers to `docs/<task-arc>/worker-report.md`.
 7. Never destroy existing user work when discarding an experiment.
 8. Report meaningful results, crashes, and diminishing returns.

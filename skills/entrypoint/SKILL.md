@@ -29,21 +29,40 @@ cheaper mode.
 
 Use this procedure even when little is known about the project.
 
-### Step 1: Locate State And Lifecycle
+### Step 1: Locate The Project
 
 Identify the project directory from the request; when a new code project has
-no specified location, default to `~/main/code/<project-name>`. Before acting
-in an existing project, inspect the user request, `docs/spec.md`,
-`docs/progress.md`, `docs/worker-report.md` when delegated work may exist,
-`README.md`, and repository status as relevant.
+no specified location, default to `~/main/code/<project-name>`. Inspect the
+user request, repository state, README, and existing `docs/` task-arc
+directories before deciding the mode of work.
+
+### Step 2: Select Or Create A Task Arc
+
+A task arc is a coherent objective represented by
+`docs/<task-arc>/spec.md` and `docs/<task-arc>/progress.md`.
+
+1. If an existing task arc covers the same objective or the new request is a
+   repair, extension, or verification of that objective, reuse that arc.
+2. If the request introduces a materially distinct objective, create a concise
+   descriptive task-arc directory.
+3. If existing project work has no arc yet, create an arc that describes the
+   current objective rather than treating the repository as a blank project.
+4. For every project task, ensure the selected arc has `spec.md` and
+   `progress.md` before working; preserve and incorporate existing
+   requirements or accepted results, including small fixes.
+
+Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
+`docs/<task-arc>/artifacts/` for deliverables produced in that arc.
+
+### Step 3: Identify The Lifecycle Stage
 
 | Situation Found | What To Do | Lifecycle Skill |
 | --- | --- | --- |
-| Blank/new project or no `docs/spec.md` | Establish requirements and only the necessary scaffold before implementation. | `initiation` |
-| Existing project with a new task, incomplete work, failing checks, or a resumed handoff | Read the specification and accepted progress, verify any worker report, then continue or correct the work. | `execution` |
+| Blank/new project | Establish its first task arc, requirements, and only the necessary scaffold before implementation. | `initiation` |
+| Existing project with a selected new or existing task arc, incomplete work, failing checks, or resumed handoff | Read or establish the arc specification and progress, verify any worker report, then continue or correct the work. | `execution` |
 | Working project whose central work is done and needs evaluation, documentation, cleanup, or publication planning | Finalize defensibility, reproducibility, artifacts, and dissemination recommendations. | `wrapup` |
 
-### Step 2: Add Only Distinct Capabilities
+### Step 4: Add Only Distinct Capabilities
 
 | Observed Need | Skill | Unique Ownership |
 | --- | --- | --- |
@@ -55,15 +74,15 @@ in an existing project, inspect the user request, `docs/spec.md`,
 | One uncertain empirical premise requiring a baseline and controlled intervention | `test-hypothesis` | Faithful single-hypothesis comparison. |
 | Durable cross-project result, decision, attributed belief, or dead end | `capture-knowledge` | Linked structured vault note without duplication or activity logging. |
 
-### Step 3: Execute Under The Contract
+### Step 5: Execute Under The Contract
 
 1. For implementation, repair, validation, or resumed project work, use
    `execution`; it covers direct work and milestone-based delegation.
 2. Before dispatching meaningful work, load the delegation contract and give
    the worker scope, acceptance checks, relevant files, and its report route.
 3. Keep project reports, exports, figures, and agent-produced deliverables in
-   the project's `docs/artifacts/`; use structured knowledge capture only for
-   enduring cross-project material worth linking.
+   the selected arc's `docs/<task-arc>/artifacts/`; use structured knowledge
+   capture only for enduring cross-project material worth linking.
 4. Load `execution` before applying behavior modifiers found in the user's
    message.
 
