@@ -51,9 +51,9 @@ used, the worker writes only `docs/worker-report.md` for durable reporting.
 - If independent tests run in parallel while using that file fallback,
   dispatch one coordinating worker to aggregate their results; never allow
   concurrent workers to write the same handoff file.
-- Before accepting a result, inspect the actual work and run or examine the
-  relevant verification. Check specification compliance before code quality or
-  narrative polish.
+- Before accepting a result, inspect the actual work closely and sceptically and 
+  run or examine the relevant verification. Check specification compliance 
+  before code quality or narrative polish.
 - For experimental or research work, separately check methodology,
   implementation fidelity, measurements, uncertainty, and claims.
 - Report unresolved risk or needed user decisions explicitly.
