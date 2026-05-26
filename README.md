@@ -12,9 +12,9 @@ extension.
 | `supervising` | `exec-supervising` | Establish ownership, reporting routes, and independent acceptance. |
 | `multi-step-execution` | `exec-multi-step` | Manage milestone-based delegated implementation. |
 | `autoresearch-loop` | `exec-autoresearch-loop` | Explore scientific premise-testable ideas or blind downstream-search candidates reproducibly. |
-| `exec-initiation` | `exec-initiation` | Establish lean project-local specification and scaffolding. |
-| `exec-iteration` | `exec-iteration` | Resume and improve existing project work. |
-| `exec-wrapup` | `exec-wrapup` | Clean, validate, document, package artifacts, and recommend publication paths. |
+| `initiation` | `exec-initiation` | Establish lean project-local specification and scaffolding. |
+| `iteration` | `exec-iteration` | Resume and improve existing project work. |
+| `wrapup` | `exec-wrapup` | Clean, validate, document, package artifacts, and recommend publication paths. |
 
 `single-step-execution` is intentionally omitted: narrow work is covered
 directly by `execution-guidance` plus `supervising`, and the

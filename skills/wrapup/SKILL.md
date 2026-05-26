@@ -1,5 +1,5 @@
 ---
-name: exec-wrapup
+name: wrapup
 description: Use when a project is working and needs evaluation, cleanup, documentation, artifacts, or a publication plan.
 ---
 

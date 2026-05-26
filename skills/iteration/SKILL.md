@@ -1,5 +1,5 @@
 ---
-name: exec-iteration
+name: iteration
 description: "Resume existing project: fix, refactor, continue."
 ---
 

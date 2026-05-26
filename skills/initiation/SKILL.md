@@ -1,5 +1,5 @@
 ---
-name: exec-initiation
+name: initiation
 description: "Start new project: explore, spec, scaffold."
 ---
 

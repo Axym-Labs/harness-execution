@@ -38,9 +38,9 @@ in an existing project, inspect the user request, `docs/spec.md`,
 
 | Situation Found | What To Do | Lifecycle Skill |
 | --- | --- | --- |
-| Blank/new project or no `docs/spec.md` | Establish requirements and only the necessary scaffold before implementation. | `exec-initiation` |
-| Existing project with a new task, incomplete work, failing checks, or a resumed handoff | Read the specification and accepted progress, verify any worker report, then continue or correct the work. | `exec-iteration` |
-| Working project whose central work is done and needs evaluation, documentation, cleanup, or publication planning | Finalize defensibility, reproducibility, artifacts, and dissemination recommendations. | `exec-wrapup` |
+| Blank/new project or no `docs/spec.md` | Establish requirements and only the necessary scaffold before implementation. | `initiation` |
+| Existing project with a new task, incomplete work, failing checks, or a resumed handoff | Read the specification and accepted progress, verify any worker report, then continue or correct the work. | `iteration` |
+| Working project whose central work is done and needs evaluation, documentation, cleanup, or publication planning | Finalize defensibility, reproducibility, artifacts, and dissemination recommendations. | `wrapup` |
 
 ### Step 2: Add Only Distinct Capabilities
 
