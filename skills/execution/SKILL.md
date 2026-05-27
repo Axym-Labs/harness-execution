@@ -129,7 +129,7 @@ Regardless of mode, always report the final outcome.
 If `fast feedback` and `low escalation` are combined, report frequently while
 deciding autonomously. If `no escalation` is present, it wins for escalation.
 
-## Failure Biases
+## Failure Modes
 
 - **Complexification**: do not add elaborate machinery when a simpler faithful
   test or implementation answers the question.
