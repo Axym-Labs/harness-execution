@@ -38,3 +38,6 @@ Establish a lean project-local source of truth before implementation.
    the spec and relevant exploration evidence.
 4. Use native session state for active delegation and the selected arc's
    `progress.md` for durable project progress.
+5. Make the repo private if it's for internal use. Example: A custom agent
+   workflow or configuration.
+6. Set up a `.gitignore` to prevent downstream issues.
