@@ -1,6 +1,6 @@
 ---
 name: initiation
-description: "Start new project: explore, spec, scaffold."
+description: "Start new project: explore, spec, scaffold. Contains information about project structure relevant to the full lifecycle."
 ---
 
 # Execution Initiation
@@ -9,7 +9,7 @@ description: "Start new project: explore, spec, scaffold."
 
 Establish a lean project-local source of truth before implementation.
 
-## Workflow
+## Workflow and structure
 
 1. Identify the goal, constraints, target directory (default
    `~/main/workspace/<name>`), and only the stack decisions needed to begin.
@@ -29,15 +29,16 @@ Establish a lean project-local source of truth before implementation.
    agreed project workflow; never publish without approval.
 7. Use `knowledge-organization` only for enduring insight, not to
    log project creation or running status.
+8. Set up a `.gitignore` to prevent downstream issues.
 
 ## Rules
 
-1. Write the task-arc spec and progress files before implementation.
-2. Keep exploration and scaffolding proportional to the task.
-3. If delegating, apply `supervising` and provide the worker
+1. Keep the first version lean.
+2. Write the task-arc spec and progress files before implementation.
+3. Keep exploration and scaffolding proportional to the task.
+4. If delegating, apply `supervising` and provide the worker
    the spec and relevant exploration evidence.
-4. Use native session state for active delegation and the selected arc's
+5. Use native session state for active delegation and the selected arc's
    `progress.md` for durable project progress.
-5. Make the repo private if it's for internal use. Example: A custom agent
+6. Make the repo private if it's for internal use. Example: A custom agent
    workflow or configuration.
-6. Set up a `.gitignore` to prevent downstream issues.
