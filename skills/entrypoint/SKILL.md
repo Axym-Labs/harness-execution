@@ -18,13 +18,6 @@ source of truth for lifecycle selection and escalation. Use `execution` as
 the primary implementation and continuation skill once work is underway; it
 owns behavior modifiers.
 
-### Reasoning Level
-
-Use **high reasoning effort** by default for all delegated tasks. Both Kimi
-(`--thinking`) and OpenClaw (`thinkingDefault: "high"`) are configured for
-this. Do not downgrade reasoning unless the user explicitly requests a faster,
-cheaper mode.
-
 ## 1. Orient And Choose Execution
 
 Use this procedure even when little is known about the project.
@@ -122,5 +115,3 @@ An alternative approach is **NOT viable** when:
 
 When in doubt, keep working on the real problem rather than substituting an
 inferior alternative.
-
----
