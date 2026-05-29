@@ -39,7 +39,9 @@ directories before deciding the mode of work.
 ### Step 2: Select Or Create A Task Arc
 
 A task arc is a coherent objective represented by
-`docs/<task-arc>/spec.md` and `docs/<task-arc>/progress.md`.
+`docs/<task-arc>/spec.md` and `docs/<task-arc>/progress.md`. The spec is the
+user-derived requirement record; preserve it by default and put running results
+in progress.
 
 1. If an existing task arc covers the same objective or the new request is a
    repair, extension, or verification of that objective, reuse that arc.

@@ -15,8 +15,9 @@ Establish a lean project-local source of truth before implementation.
    `~/main/workspace/<name>`), and only the stack decisions needed to begin.
 2. Select a concise first task arc and create
    `<project-dir>/docs/<task-arc>/spec.md` and `progress.md`. Preserve user
-   requirements in the spec, record unresolved questions rather than silently
-   choosing scope, and initialize progress with the established current state.
+   requirements in the user-derived spec without treating it as a working log,
+   record unresolved questions rather than silently choosing scope, and
+   initialize progress with the established current state.
 3. Add `docs/<task-arc>/exploration.md` only when prior-work review, alternatives, or
    premise validation materially informs the project. For scientific work use
    `scientific-work`; for a controlled empirical premise use `test-hypothesis`.

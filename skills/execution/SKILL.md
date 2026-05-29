@@ -21,7 +21,8 @@ modifiers once implementation, repair, or validation is underway.
 - Verify directory exists
 - Use the task arc selected by `entrypoint`; ensure its
   `docs/<task-arc>/spec.md` and `progress.md` exist before any project work
-- Read `docs/<task-arc>/spec.md` for requirements
+- Read `docs/<task-arc>/spec.md` for requirements; it is the user-derived
+  specification and should not be edited by default.
 - Read `docs/<task-arc>/exploration.md` when present for prior findings
 - Read `docs/<task-arc>/progress.md` for durable execution results
 - Read `docs/<task-arc>/worker-report.md` when delegated work used the worker-owned
@@ -34,10 +35,10 @@ modifiers once implementation, repair, or validation is underway.
 ### 2. Establish The Next Verified Milestone
 
 - Compare spec features against implementation
-- Check off completed items
+- Note completed items in progress
 - Identify next milestone or blocker
-- State the next milestone in `docs/<task-arc>/spec.md` as needed and record
-  accepted material outcomes in `docs/<task-arc>/progress.md`.
+- State the next milestone from the spec and record accepted material outcomes
+  in `docs/<task-arc>/progress.md`.
 - Milestones record completed phases, meaningful verification, blockers, and
   final results, not a stream of command output.
 
@@ -83,13 +84,29 @@ modifiers once implementation, repair, or validation is underway.
 
 ### 6. Record And Report
 
-- Update `docs/<task-arc>/spec.md` with completed requirements
+- Preserve `docs/<task-arc>/spec.md`; amend it only when the user changes or
+  approves requirements.
 - After checking evidence, update Claw-owned `docs/<task-arc>/progress.md`
   with material verified outcomes.
 - Store generated project artifacts in `docs/<task-arc>/artifacts/`; use
   `knowledge-organization` only for durable structured knowledge worth linking
   beyond project working state
 - Report start, meaningful milestones when requested, and final outcome.
+
+#### `progress.md` Layout
+
+- Use reverse chronological bullets by default; insert new entries at the top.
+- Each entry should include type, time, and information, e.g.
+  `- IMPLEMENTATION (2026-05-29 14:30): ...`. Allowed types
+  include `INITIATION`, `PIVOT`, `DECISION`, `EXPERIMENT`, `IMPLEMENTATION`, `VERIFICATION`, 
+  `BLOCKER`, `ARTIFACT`, `MILESTONE`, `WRAPUP`. `MILESTONE` is for noting a
+  milestone has been reached, `DECISION` for notable design decisions.
+- Record important metrics, verificaion status, decisions, next actions, and
+  links to important artifacts so a later session can resume quickly and the
+  results can be published if needed. Store more rather than less, especially
+  if it's not saved anywhere else.
+- Use Tables when they make metrics, comparisons, or artifact indexes
+  clearer than bullets. 
 
 ## Behavior Modifiers
 
@@ -124,7 +141,7 @@ Regardless of mode, always report the final outcome.
 - **"evaluate harness"** — While doing the actual task, record concrete,
   reusable harness findings or failures in
   `$VAULT_PATH/Knowledge/workflow-reflection.md` using `knowledge-organization`
-  discipline; do not write filler.
+  discipline.
 
 If `fast feedback` and `low escalation` are combined, report frequently while
 deciding autonomously. If `no escalation` is present, it wins for escalation.
