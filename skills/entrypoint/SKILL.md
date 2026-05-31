@@ -64,7 +64,6 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 | Observed Need | Skill | Unique Ownership |
 | --- | --- | --- |
 | Any delegated worker or subagent | `supervising` | Worker scope, reporting route, acceptance boundary, and Claw's independent review. |
-| Long non-agent command such as a download, installation, export, sync, or build | `background-task-execution` | Non-blocking launch, bounded status checking, and completion handling. |
 | Comparable iterative idea testing, including scientific premise validation or blind downstream search such as hyperparameter tuning | `autoresearch-loop` | Experiment-loop regime, baseline comparison, keep/discard decisions, and safe parallel search. |
 | ML runs, datasets, or compute-heavy local work | `machine` | Machine-specific placement, bottleneck diagnosis, and throughput/parallelism measurement. |
 | Work intended to support a scientific or ML knowledge claim | `scientific-work` | Method validity, evidence boundaries, and claim discipline. |
@@ -82,6 +81,15 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
    capture only for enduring cross-project material worth linking.
 4. Load `execution` before applying project directives found in the user's
    message.
+
+## User Interaction During Execution
+
+- Show, do not tell: surface concrete artifacts, diffs, screenshots, plots,
+  tables, logs, or checks instead of describing progress abstractly.
+- Upload or link important artifacts when the channel supports it; embed plots
+  in PDF responses when possible.
+- If the spec/progress does not already define the next step, suggest a small
+  number of next-step options rather than a single vague continuation.
 
 ---
 

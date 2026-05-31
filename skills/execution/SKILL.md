@@ -91,6 +91,8 @@ validation is underway.
 - Store generated project artifacts in `docs/<task-arc>/artifacts/`; use
   `knowledge-organization` only for durable structured knowledge worth linking
   beyond project working state
+- Use `sci-scientific-visualization` when creating, polishing, or reviewing
+  project figures.
 - When the selected task arc reaches its completion criteria, load `wrapup`
   before reporting final success.
 - Report start, meaningful milestones when requested, and final outcome.

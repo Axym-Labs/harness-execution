@@ -34,9 +34,10 @@ and easy to reuse.
 - If the arc used iteration on a measurable metric, especially through
   `autoresearch-loop`, create a progress plot from
   `docs/<task-arc>/progress.md`: metric value over iteration time, with time on
-  the x axis. Store it in `docs/<task-arc>/artifacts/` and link it from the
-  final progress entry. If the progress file lacks enough structured metric
-  data, record that limitation instead of inventing values.
+  the x axis. Use `sci-scientific-visualization`, store it in
+  `docs/<task-arc>/artifacts/`, and link it from the final progress entry. If
+  the progress file lacks enough structured metric data, record that limitation
+  instead of inventing values.
 - Write final README and documentation, including limitations and how claims
   are supported.
 - Ensure reproducibility (pinned dependencies, seed values, runnable checks).
