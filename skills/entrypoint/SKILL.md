@@ -90,6 +90,9 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
   tables, logs, or checks instead of describing progress abstractly.
 - Upload or link important artifacts when the channel supports it; embed plots
   in PDF responses when possible.
+- For substantial PDF responses, start from
+  `~/main/claw_extensions/claw-reusability-assets/templates/response.tex` and
+  render with `render-pdf.sh`.
 - If the spec/progress does not already define the next step, suggest a small
   number of next-step options rather than a single vague continuation.
 

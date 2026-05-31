@@ -38,6 +38,10 @@ and easy to reuse.
   `docs/<task-arc>/artifacts/`, and link it from the final progress entry. If
   the progress file lacks enough structured metric data, record that limitation
   instead of inventing values.
+- For simple numeric CSV plots, use `csv-plot.py` when it fits the data. For a
+  project PDF wrapup, start from
+  `~/main/claw_extensions/claw-reusability-assets/templates/project-wrapup.tex`
+  and render with `render-pdf.sh`.
 - Write final README and documentation, including limitations and how claims
   are supported.
 - Ensure reproducibility (pinned dependencies, seed values, runnable checks).
