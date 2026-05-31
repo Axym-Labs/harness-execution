@@ -52,6 +52,14 @@ validation is underway.
 - Prefer existing, working solutions over writing a custom implementation by
   default. If an existing solution is hard to set up and the custom version is
   not too hard to get right, conservatively prefer the custom solution.
+- For hyperparameter sweeps, prefer Optuna (`https://optuna.readthedocs.io/`)
+  unless the project already has a working tool. Predefine the search space,
+  target metric, seeds/folds, and fixed budget (`n_trials` or timeout) before
+  running; run the sweep once rather than extending it ad hoc. Before choosing
+  the budget, search previous work or practitioner norms for the closest
+  comparable model, dataset, and compute setting. Report the best trial,
+  uncertainty/significance from repeats or folds when available, parameter
+  importances, and relevant plots/tables.
 - Prioritize foundational and structure-determining work over polish or
   optimization: do high-temperature decisions first, then low-temperature
   tuning within a validated structure.
