@@ -97,7 +97,7 @@ validation is underway.
 
 - Preserve `docs/<task-arc>/spec.md`; amend it only when the user changes or
   approves requirements.
-- After checking evidence, update Claw-owned `docs/<task-arc>/progress.md`
+- After checking evidence, update Harness-owned `docs/<task-arc>/progress.md`
   with material verified outcomes.
 - Store generated project artifacts in `docs/<task-arc>/artifacts/`; use
   `knowledge-organization` only for durable structured knowledge worth linking
@@ -151,7 +151,7 @@ for escalation.
 
 - **Unowned slowness**: if a run/program is slow, slower than expected, or a
   computational part becomes prohibitively slow, expensive, unreliable, or a
-  significant bottleneck, attribute it first to Claw's design decisions.
+  significant bottleneck, attribute it first to Harness's design decisions.
   Frequent causes: bad design decisions, lazy implementation, or failure to
   follow the specification or implied approach in the user's request.
 - **Complexification**: do not add elaborate machinery when a simpler faithful

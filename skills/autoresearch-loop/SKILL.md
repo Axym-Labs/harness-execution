@@ -51,7 +51,7 @@ handoff file has a single writer.
 
 ### Setup
 
-Create `.claw-autoresearch.md` with the target file, experiment command,
+Create `.harness-autoresearch.md` with the target file, experiment command,
 metric name/parser/direction, time budget, and read-only files. Before any
 experiment, record a clean baseline and use a dedicated experiment branch or
 worktree so existing user changes cannot be discarded.
@@ -69,7 +69,7 @@ Apply `supervising` when dispatching an experiment worker.
 4. Arrange the configured completion route and return from an interactive
    initiating turn while the experiment runs.
 5. When each result arrives, inspect it, compare it with the baseline, log the
-   decision in `.claw/experiments/results.tsv`, and record accepted durable
+   decision in `.harness/experiments/results.tsv`, and record accepted durable
    progress in `docs/<task-arc>/progress.md` with timestamped metric values
    parseable enough for wrapup plots.
 6. Keep an improved change by committing it. Discard a non-improving change

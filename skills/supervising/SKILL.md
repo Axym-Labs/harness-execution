@@ -13,15 +13,15 @@ redefine those decisions here.
 
 | Concern | Owner | Contract |
 |---------|-------|----------|
-| Objective, constraints, and acceptance criteria | Claw | Establish before dispatch; a worker cannot silently redefine them. |
+| Objective, constraints, and acceptance criteria | Harness | Establish before dispatch; a worker cannot silently redefine them. |
 | Implementation or delegated analysis | Worker/subagent | Perform only the dispatched scope and report changes, evidence, blockers, and assumptions. |
 | Worker-side checks | Worker/subagent | Run requested checks and provide results; these are evidence, not acceptance. |
 | Worker handoff report | Worker/subagent | Write or replace `docs/<task-arc>/worker-report.md` when a verified bidirectional session route is unavailable; it is the single worker-owned durable handoff file. |
-| Durable progress record and accepted milestone log | Claw | Own and update `docs/<task-arc>/progress.md` after verifying worker messages and evidence; a worker may propose progress but does not author the accepted record. |
-| Acceptance and scientific/technical conclusion | Claw | Inspect actual output critically, rigorously and independently assess evidence before reporting success. |
-| User-facing updates and outward actions | Claw | Report accurately and obtain approval where required. |
+| Durable progress record and accepted milestone log | Harness | Own and update `docs/<task-arc>/progress.md` after verifying worker messages and evidence; a worker may propose progress but does not author the accepted record. |
+| Acceptance and scientific/technical conclusion | Harness | Inspect actual output critically, rigorously and independently assess evidence before reporting success. |
+| User-facing updates and outward actions | Harness | Report accurately and obtain approval where required. |
 
-For project work, `docs/<task-arc>/spec.md` holds requirements. Claw maintains
+For project work, `docs/<task-arc>/spec.md` holds requirements. Harness maintains
 `docs/<task-arc>/progress.md` for material verified progress, decisions, and
 results. Unless a tested message route is being used, the worker writes only
 `docs/<task-arc>/worker-report.md` for durable reporting.
@@ -57,7 +57,7 @@ results. Unless a tested message route is being used, the worker writes only
 - Prefer event-driven completion and blocker messages; avoid repetitive polls.
 - While no tested bidirectional route is available, require a single
   worker-owned `docs/<task-arc>/worker-report.md` with milestones, checks, results, and
-  blockers. Claw verifies its integrity and evidence before transferring
+  blockers. Harness verifies its integrity and evidence before transferring
   accepted facts into `docs/<task-arc>/progress.md`.
 - If independent tests run in parallel while using that file fallback,
   dispatch one coordinating worker to aggregate their results; never allow

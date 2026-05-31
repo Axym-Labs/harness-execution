@@ -1,6 +1,6 @@
-# Claw Execution Skills
+# Harness Execution Skills
 
-Execution-oriented skills for the Kimi-Claw harness, kept outside the core
+Execution-oriented skills for the Kimi-Harness harness, kept outside the core
 configuration repository so execution policy can evolve as a coherent
 extension.
 
@@ -22,7 +22,7 @@ former skill contained no domain-specific guidance.
 
 Each coherent project objective uses a task arc under `docs/<task-arc>/` with
 required `spec.md` and `progress.md`. Delegated workers currently report
-through one worker-owned `docs/<task-arc>/worker-report.md` file; Claw
+through one worker-owned `docs/<task-arc>/worker-report.md` file; Harness
 verifies it before recording accepted progress. A live OpenClaw
 `sessions_send` round trip on May 26, 2026 skipped
 delivery, so session-message reporting remains conditional on a later
@@ -30,7 +30,7 @@ successful runtime test.
 
 ## Integration
 
-The `kimi-claw` repository generates full-content namespaced runtime copies
+The `kimi-harness` repository generates full-content namespaced runtime copies
 from this sibling checkout and loads those through OpenClaw's
 `skills.load.extraDirs` setting. This repository stores no credentials or
 project-specific output.

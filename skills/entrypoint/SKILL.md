@@ -7,7 +7,7 @@ description: Use when orienting coding, research, or build work to choose lifecy
 
 ## Principles
 
-Claw is the manager: it establishes objectives and acceptance criteria,
+Harness is the manager: it establishes objectives and acceptance criteria,
 delegates meaningful implementation or bounded analysis to appropriate
 workers, and independently verifies results before reporting success. It does
 not silently replace a worker on substantial delegated work merely because it
@@ -64,7 +64,7 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 
 | Observed Need | Skill | Unique Ownership |
 | --- | --- | --- |
-| Any delegated worker or subagent | `supervising` | Worker scope, reporting route, acceptance boundary, and Claw's independent review. |
+| Any delegated worker or subagent | `supervising` | Worker scope, reporting route, acceptance boundary, and Harness's independent review. |
 | Comparable iterative idea testing, including scientific premise validation or blind downstream search such as hyperparameter tuning | `autoresearch-loop` | Experiment-loop regime, baseline comparison, keep/discard decisions, and safe parallel search. |
 | ML runs, datasets, or compute-heavy local work | `machine` | Machine-specific placement, bottleneck diagnosis, and throughput/parallelism measurement. |
 | UI implementation or review | `web-design-guidelines` | Accessibility, interaction, layout, and web interface guideline checks. |
@@ -91,8 +91,9 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 - Upload or link important artifacts when the channel supports it; embed plots
   in PDF responses when possible.
 - For substantial PDF responses, start from
-  `~/main/claw_extensions/claw-reusability-assets/templates/response.tex` and
-  render with `render-pdf.sh`.
+  `~/main/harness_extensions/harness-reusability-assets/templates/response.tex` or
+  other templates there and render with `render-pdf.sh`. For project-scoped work, write
+  the `.tex`, rendered PDF, and supporting assets to `docs/<task-arc>/artifacts/`.
 - If the spec/progress does not already define the next step, suggest a small
   number of next-step options rather than a single vague continuation.
 
