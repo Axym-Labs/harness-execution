@@ -10,7 +10,7 @@ description: Use for iterative idea testing and optimization, distinguishing pre
 Explore candidate improvements reproducibly while choosing the feedback regime
 that can honestly evaluate them.
 
-## Choose A Regime
+## Principles
 
 ### Scientific Setting
 
@@ -47,7 +47,9 @@ permit. While the `docs/<task-arc>/worker-report.md` fallback is active, one del
 experiment worker must coordinate and aggregate parallel runs so that the
 handoff file has a single writer.
 
-## Setup
+## Workflow
+
+### Setup
 
 Create `.claw-autoresearch.md` with the target file, experiment command,
 metric name/parser/direction, time budget, and read-only files. Before any
@@ -55,7 +57,7 @@ experiment, record a clean baseline and use a dedicated experiment branch or
 worktree so existing user changes cannot be discarded.
 Apply `supervising` when dispatching an experiment worker.
 
-## Loop
+### Loop
 
 1. Classify the idea as scientific or blind and record the justification.
 2. In the scientific setting, state and test the underlying premise using
@@ -68,7 +70,8 @@ Apply `supervising` when dispatching an experiment worker.
    initiating turn while the experiment runs.
 5. When each result arrives, inspect it, compare it with the baseline, log the
    decision in `.claw/experiments/results.tsv`, and record accepted durable
-   progress in `docs/<task-arc>/progress.md`.
+   progress in `docs/<task-arc>/progress.md` with timestamped metric values
+   parseable enough for wrapup plots.
 6. Keep an improved change by committing it. Discard a non-improving change
    only inside the dedicated clean experiment branch/worktree and only after
    confirming there are no unrelated modifications.

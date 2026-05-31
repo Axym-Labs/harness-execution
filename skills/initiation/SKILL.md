@@ -9,7 +9,7 @@ description: "Start new project: explore, spec, scaffold. Contains information a
 
 Establish a lean project-local source of truth before implementation.
 
-## Workflow and structure
+## Workflow
 
 1. Identify the goal, constraints, target directory (default
    `~/main/workspace/<name>`), and only the stack decisions needed to begin.

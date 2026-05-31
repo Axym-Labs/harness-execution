@@ -5,7 +5,7 @@ description: Use when orienting coding, research, or build work to choose lifecy
 
 # Execution Suite Entrypoint
 
-## Purpose
+## Principles
 
 Claw is the manager: it establishes objectives and acceptance criteria,
 delegates meaningful implementation or bounded analysis to appropriate
@@ -15,10 +15,12 @@ could make edits itself.
 
 Read this skill when orienting a coding, ML research, or build task. It is the
 source of truth for lifecycle selection and escalation. Use `execution` as
-the primary implementation and continuation skill once work is underway; it
-owns behavior modifiers.
+the primary implementation and continuation skill once work is underway.
 
-## 1. Orient And Choose Execution
+When a task arc reaches its completion criteria, use `wrapup` before treating
+the arc as finished.
+
+## Workflow
 
 Use this procedure even when little is known about the project.
 
@@ -55,7 +57,7 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 | --- | --- | --- |
 | Blank/new project | Establish its first task arc, requirements, and only the necessary scaffold before implementation. | `initiation` |
 | Existing project with a selected new or existing task arc, incomplete work, failing checks, or resumed handoff | Read or establish the arc specification and progress, verify any worker report, then continue or correct the work. | `execution` |
-| Working project whose central work is done and needs evaluation, documentation, cleanup, or publication planning | Finalize defensibility, reproducibility, artifacts, and dissemination recommendations. | `wrapup` |
+| Selected task arc whose central work is done and needs evaluation, documentation, cleanup, or publication planning | Finalize defensibility, reproducibility, artifacts, and dissemination recommendations. | `wrapup` |
 
 ### Step 4: Add Only Distinct Capabilities
 
@@ -78,14 +80,15 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 3. Keep project reports, exports, figures, and agent-produced deliverables in
    the selected arc's `docs/<task-arc>/artifacts/`; use structured knowledge
    capture only for enduring cross-project material worth linking.
-4. Load `execution` before applying behavior modifiers found in the user's
+4. Load `execution` before applying project directives found in the user's
    message.
 
 ---
 
-## 2. Escalation Policy
+## Rules
 
-### Default Rule
+### Escalation Policy
+
 Escalate to the user after 3 consecutive failed attempts or if blocked for
 >60 minutes.
 

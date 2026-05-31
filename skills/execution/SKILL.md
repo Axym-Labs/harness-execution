@@ -9,8 +9,8 @@ description: Use as the primary execution skill for implementing, resuming, fixi
 
 Implement or resume work on a project and carry it through verified
 milestones. Use `entrypoint` for lifecycle selection and escalation policy;
-use this skill as the ordinary working path and source of truth for behavior
-modifiers once implementation, repair, or validation is underway.
+use this skill as the ordinary working path once implementation, repair, or
+validation is underway.
 
 ## Workflow
 
@@ -91,6 +91,8 @@ modifiers once implementation, repair, or validation is underway.
 - Store generated project artifacts in `docs/<task-arc>/artifacts/`; use
   `knowledge-organization` only for durable structured knowledge worth linking
   beyond project working state
+- When the selected task arc reaches its completion criteria, load `wrapup`
+  before reporting final success.
 - Report start, meaningful milestones when requested, and final outcome.
 
 #### `progress.md` Layout
@@ -101,37 +103,21 @@ modifiers once implementation, repair, or validation is underway.
   include `INITIATION`, `PIVOT`, `DECISION`, `EXPERIMENT`, `IMPLEMENTATION`, `VERIFICATION`, 
   `BLOCKER`, `ARTIFACT`, `MILESTONE`, `WRAPUP`. `MILESTONE` is for noting a
   milestone has been reached, `DECISION` for notable design decisions.
-- Record important metrics, verificaion status, decisions, next actions, and
+- Record important metrics, verification status, decisions, next actions, and
   links to important artifacts so a later session can resume quickly and the
   results can be published if needed. Store more rather than less, especially
   if it's not saved anywhere else.
-- Use Tables when they make metrics, comparisons, or artifact indexes
+- Use tables when they make metrics, comparisons, or artifact indexes
   clearer than bullets. 
 
-## Behavior Modifiers
+## Project Directives
 
-Before execution, actively scan the user's full message for these modifiers.
-They can occur anywhere and apply unless explicitly limited or negated.
-Regardless of mode, always report the final outcome.
+Before execution, actively scan the user's full message for these project
+directives. They can occur anywhere and apply unless explicitly limited or
+negated. Regardless of mode, always report the final outcome. General
+interaction policy such as fast feedback and approach verification is defined
+in `AGENTS.md` and the `verify-approach` skill.
 
-- **"verify approach"** (also accept the literal typo **"veriy approach"**) —
-  Before beginning substantive execution, respond once with this fixed
-  structure and wait for feedback:
-
-  ```markdown
-  **Partial** - Verifying approach before execution.
-
-  Approach: <one short sentence or paragraph describing the planned approach>
-
-  Key things to look out for:
-  - Fork: <important alternative or decision point, or "none identified">
-  - Possible blocker: <dependency, uncertainty, or "none identified">
-
-  Feedback requested: confirm this approach or identify a correction.
-  ```
-
-- **"fast feedback"** — Report after every significant sub-step and escalate
-  or seek guidance after 1 failed attempt or more than 20 minutes blocked.
 - **"low escalation"** — Report at natural milestones and make autonomous
   decisions; do not escalate early.
 - **"no escalation"** — Self-resolve without asking the user for help; follow
@@ -143,8 +129,9 @@ Regardless of mode, always report the final outcome.
   `$VAULT_PATH/Knowledge/workflow-reflection.md` using `knowledge-organization`
   discipline.
 
-If `fast feedback` and `low escalation` are combined, report frequently while
-deciding autonomously. If `no escalation` is present, it wins for escalation.
+If `fast feedback` from `AGENTS.md` and `low escalation` are combined, report
+frequently while deciding autonomously. If `no escalation` is present, it wins
+for escalation.
 
 ## Failure Modes
 
@@ -170,4 +157,5 @@ deciding autonomously. If `no escalation` is present, it wins for escalation.
 4. Remove dead code promptly.
 5. Update tests to match new behavior.
 6. If stuck for >60 min, escalate to user.
-7. Escalation policy and alternative-approach rules are defined in the `entrypoint` skill.
+7. Use `wrapup` before closing a completed task arc.
+8. Escalation policy and alternative-approach rules are defined in the `entrypoint` skill.

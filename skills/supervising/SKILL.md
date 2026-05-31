@@ -9,7 +9,7 @@ This skill owns the delegation contract and supervision mechanics. Use
 `entrypoint` to choose the work mode and escalation policy; do not
 redefine those decisions here.
 
-## Ownership Contract
+## Principles
 
 | Concern | Owner | Contract |
 |---------|-------|----------|
@@ -26,7 +26,9 @@ For project work, `docs/<task-arc>/spec.md` holds requirements. Claw maintains
 results. Unless a tested message route is being used, the worker writes only
 `docs/<task-arc>/worker-report.md` for durable reporting.
 
-## Before Dispatch
+## Workflow
+
+### Before Dispatch
 
 1. State the primary task, and label side-questions so they do not silently
    replace the main objective.
@@ -49,7 +51,7 @@ results. Unless a tested message route is being used, the worker writes only
      Follow each route's reporting contract rather than assuming it exposes
      an OpenClaw session channel.
 
-## During And After Work
+### During And After Work
 
 - Prefer event-driven completion and blocker messages; avoid repetitive polls.
 - While no tested bidirectional route is available, require a single

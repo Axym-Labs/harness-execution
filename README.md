@@ -8,12 +8,13 @@ extension.
 
 | Source Skill | Visible Runtime Name | Purpose |
 | --- | --- | --- |
-| `execution` | `exec-execution` | Primary implementation, behavior modifiers, task ordering, validation, continuation, and milestone workflow. |
+| `execution` | `exec-execution` | Primary implementation, project directives, task ordering, validation, continuation, and milestone workflow. |
 | `entrypoint` | `exec-entrypoint` | Enter the suite: select lifecycle, capabilities, and escalation policy. |
 | `supervising` | `exec-supervising` | Establish ownership, reporting routes, and independent acceptance. |
 | `autoresearch-loop` | `exec-autoresearch-loop` | Explore scientific premise-testable ideas or blind downstream-search candidates reproducibly. |
 | `initiation` | `exec-initiation` | Establish lean project-local specification and scaffolding. |
 | `wrapup` | `exec-wrapup` | Clean, validate, document, package artifacts, and recommend publication paths. |
+| `readme-writing` | `exec-readme-writing` | Polish README structure, usability, evidence visibility, and citation placement. |
 
 `single-step-execution` is intentionally omitted: narrow work is covered
 directly by `execution` plus `supervising`, and the
