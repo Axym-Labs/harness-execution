@@ -154,4 +154,4 @@ validation is underway.
 5. Update tests to match new behavior.
 6. If stuck, follow workspace `AGENTS.md` escalation and no-escalation policy.
 7. Use `wrapup` before closing a completed task arc.
-8. Escalation policy and alternative-approach rules are defined in workspace `AGENTS.md`.
+8. Escalation policy and alternative-approach rules are defined in workspace `AGENTS.md`. The user does not baby-sit.

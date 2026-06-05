@@ -40,12 +40,13 @@ Examples:
 - Comparing candidate prompts or heuristic variants whose value is defined by
   task success on the target evaluation.
 
-Evaluate each idea directly against the downstream objective and do not invent
-a proxy story after the fact. Blind evaluations are often independent; run
+Evaluate each idea directly against the downstream objective. Blind evaluations are often independent; run
 them in parallel when resources, reproducibility, and the `machine` guidance
 permit. While the `docs/<task-arc>/worker-report.md` fallback is active, one delegated
 experiment worker must coordinate and aggregate parallel runs so that the
 handoff file has a single writer.
+A garden of forking path stragegy/technique is often effective.
+In contrast to after-the-fact proxy stories, finding a theoretical framework or more precise mechanistic evidence that explain an empirical observation is valid (but not required by default).
 
 ## Workflow
 
