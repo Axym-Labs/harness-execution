@@ -40,7 +40,7 @@ and easy to reuse.
   instead of inventing values.
 - For simple numeric CSV plots, use `csv-plot.py` when it fits the data. For a
   project PDF wrapup, start from
-  `~/main/harness_extensions/harness-reusability-assets/templates/project-wrapup.tex`
+  `~/main/harness/harness-reusability-assets/templates/project-wrapup.tex`
   and render with `render-pdf.sh`.
 - Write final README and documentation, including limitations and how claims
   are supported.

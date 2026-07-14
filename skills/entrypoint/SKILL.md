@@ -66,7 +66,7 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 | --- | --- | --- |
 | Any delegated worker or subagent | `supervising` | Worker scope, reporting route, acceptance boundary, and Harness's independent review. |
 | Comparable iterative idea testing, including scientific premise validation or blind downstream search such as hyperparameter tuning | `autoresearch-loop` | Experiment-loop regime, baseline comparison, keep/discard decisions, and safe parallel search. |
-| ML runs, datasets, or compute-heavy local work | `machine` | Machine-specific placement, bottleneck diagnosis, and throughput/parallelism measurement. |
+| ML runs, datasets, or compute-heavy local work | `run-execution-notes` | Maintained local paths, bottleneck diagnosis, and throughput/parallelism measurement. |
 | UI implementation or review | `web-design-guidelines` | Accessibility, interaction, layout, and web interface guideline checks. |
 | Work intended to support a scientific or ML knowledge claim | `scientific-work` | Method validity, evidence boundaries, and claim discipline. |
 | One uncertain empirical premise requiring a baseline and controlled intervention | `test-hypothesis` | Faithful single-hypothesis comparison. |
@@ -91,7 +91,7 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 - Upload or link important artifacts when the channel supports it; embed plots
   in PDF responses when possible.
 - For substantial PDF responses, start from
-  `~/main/harness_extensions/harness-reusability-assets/templates/response.tex` or
+  `~/main/harness/harness-reusability-assets/templates/response.tex` or
   other templates there and render with `render-pdf.sh`. For project-scoped work, write
   the `.tex`, rendered PDF, and supporting assets to `docs/<task-arc>/artifacts/`.
 - If the spec/progress does not already define the next step, suggest a small

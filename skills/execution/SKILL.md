@@ -63,6 +63,12 @@ validation is underway.
 - Prioritize foundational and structure-determining work over polish or
   optimization: do high-temperature decisions first, then low-temperature
   tuning within a validated structure.
+- Use vectorized implementations instead of Python loops whenever possible.
+  Inspect the full implementation for counterproductive performance paths
+  before accepting a slow run or optimizing an isolated line.
+- Save model checkpoints by default when their size is reasonable. Retain the
+  checkpoints needed for reproducibility or recovery and deliberately delete
+  superseded checkpoints rather than accumulating them indefinitely.
 - Use bounded experiments where evidence is needed; load `test-hypothesis`
   when it fits. One or two well-motivated retries are acceptable, but do not
   continue from sunk cost alone.
