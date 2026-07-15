@@ -90,10 +90,11 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
   tables, logs, or checks instead of describing progress abstractly.
 - Upload or link important artifacts when the channel supports it; embed plots
   in PDF responses when possible.
-- For substantial PDF responses, start from
-  `~/main/harness/harness-reusability-assets/templates/response.tex` or
-  other templates there and render with `render-pdf.sh`. For project-scoped work, write
-  the `.tex`, rendered PDF, and supporting assets to `docs/<task-arc>/artifacts/`.
+- For substantial PDF responses, start from this skill's bundled
+  `assets/response.tex` and render with `scripts/render-pdf.sh`, resolving both
+  paths from the directory containing this `SKILL.md`. For project-scoped work,
+  write the `.tex`, rendered PDF, and supporting assets to
+  `docs/<task-arc>/artifacts/`.
 - If the spec/progress does not already define the next step, suggest a small
   number of next-step options rather than a single vague continuation.
 

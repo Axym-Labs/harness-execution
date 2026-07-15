@@ -32,7 +32,7 @@ Establish a lean project-local source of truth before implementation.
 6. Store generated project deliverables and agent artifacts under
    `<project-dir>/docs/<task-arc>/artifacts/` when they are created.
 7. Initialize or publish Git only when requested or already part of the
-   agreed project workflow; never publish without approval.
+   agreed project workflow.
 8. Use `knowledge-organization` only for enduring insight, not to
    log project creation or running status.
 9. Set up a `.gitignore` to prevent downstream issues.

@@ -38,10 +38,10 @@ and easy to reuse.
   `docs/<task-arc>/artifacts/`, and link it from the final progress entry. If
   the progress file lacks enough structured metric data, record that limitation
   instead of inventing values.
-- For simple numeric CSV plots, use `csv-plot.py` when it fits the data. For a
-  project PDF wrapup, start from
-  `~/main/harness/harness-reusability-assets/templates/project-wrapup.tex`
-  and render with `render-pdf.sh`.
+- For simple numeric CSV plots, use `scientific-visualization`'s bundled
+  `scripts/csv-plot.py` when it fits the data. For a project PDF wrapup, start
+  from this skill's bundled `assets/project-wrapup.tex` and render with
+  `entrypoint`'s bundled `scripts/render-pdf.sh`.
 - Write final README and documentation, including limitations and how claims
   are supported.
 - Ensure reproducibility (pinned dependencies, seed values, runnable checks).
@@ -94,5 +94,5 @@ and easy to reuse.
 4. Document known limitations honestly.
 5. Ensure someone else can reproduce the results.
 6. Insert new task-arc reflection rows at the top of the log table.
-7. Recommend outward-facing actions, but do not publish or post without the
-   user's approval of the content and action.
+7. Recommend outward-facing actions, but do not send email or publish a post
+   without the user's approval of the outward action.
