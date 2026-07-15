@@ -28,7 +28,7 @@
 \newcommand{\publicationfigure}[5][\linewidth]{%
   \ifdefined\HCode
     \ifvmode\IgnorePar\fi\EndP
-    \HCode{<figure class="publication-figure"><img src="#3" alt="#4" /><figcaption>}%
+    \HCode{<figure class="publication-figure"><img src="#3" alt="#4" loading="lazy" decoding="async" /><figcaption>}%
     #5%
     \HCode{</figcaption></figure>}\ShowPar
   \else
