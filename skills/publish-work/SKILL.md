@@ -8,3 +8,19 @@ description: Use when completed work is ready for a dedicated publication and vi
 Copy the appropriate draft template from `assets/article.md`,
 `assets/paper.md`, or `assets/product.md` into the respective publication task
 arc. Complete its task bullets there with the user's assistance.
+
+## Placement
+
+- Publish solo-authored research, technical essays, exploratory work, and work
+  whose reputation should primarily attach to the user on the personal website.
+- Publish collaborative or Axym-maintained work, software and documentation,
+  datasets, benchmarks, and durable team resources on the Axym website.
+- Keep the personal website as the complete work index. Use one canonical full
+  publication and only a summary or adapted announcement on the other site.
+
+## Work-type conversion
+
+- Article → extend into a paper when the contribution and evidence warrant it.
+- Paper → condense into a project page.
+- Product or codebase-centric work → create a project page and article, and
+  usually hosted documentation when ongoing use requires it.
