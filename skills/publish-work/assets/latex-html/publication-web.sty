@@ -1,0 +1,38 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{publication-web}[2026/07/15 Shared PDF and embedded HTML primitives]
+
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\RequirePackage{mathpazo}
+\RequirePackage{longtable}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{calc}
+
+\definecolor{publicationaccent}{HTML}{3F21B6}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=publicationaccent,
+  citecolor=publicationaccent,
+  urlcolor=publicationaccent
+}
+
+\setcounter{secnumdepth}{-1}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\real}[1]{#1}
+
+\newcommand{\publicationfigure}[5][\linewidth]{%
+  \ifdefined\HCode
+    \ifvmode\IgnorePar\fi\EndP
+    \HCode{<figure class="publication-figure"><img src="#3" alt="#4" /><figcaption>}%
+    #5%
+    \HCode{</figcaption></figure>}\ShowPar
+  \else
+    \begin{figure}[htbp]
+      \centering
+      \includegraphics[width=#1]{#2}
+      \caption{#5}
+    \end{figure}
+  \fi
+}

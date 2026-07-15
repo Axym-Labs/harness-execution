@@ -1,6 +1,6 @@
 ---
 name: publish-work
-description: Use when completed work is ready for a dedicated publication and visibility task arc.
+description: Use when completed work is ready for a publication and visibility task arc, a paper-derived project page, or the shared LaTeX-to-HTML website path.
 ---
 
 # Publish Work
@@ -8,6 +8,12 @@ description: Use when completed work is ready for a dedicated publication and vi
 Copy the appropriate draft template from `assets/article.md`,
 `assets/paper.md`, or `assets/product.md` into the respective publication task
 arc. Complete its task bullets there with the user's assistance.
+
+For a project page derived from a paper, follow
+[`references/project-page.md`](references/project-page.md). For an article or
+project page embedded in the personal or Axym website, use the shared pipeline
+in [`references/latex-to-html.md`](references/latex-to-html.md); the renderer
+and website-facing assets in this skill are the canonical implementation.
 
 ## Placement
 
