@@ -9,6 +9,9 @@
 \RequirePackage{booktabs}
 \RequirePackage{array}
 \RequirePackage{calc}
+\RequirePackage{caption}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
 
 \definecolor{publicationaccent}{HTML}{3F21B6}
 \hypersetup{
@@ -32,7 +35,24 @@
     \begin{figure}[htbp]
       \centering
       \includegraphics[width=#1]{#2}
-      \caption{#5}
+      \caption*{#5}
     \end{figure}
+  \fi
+}
+
+\newcommand{\publicationbadge}[3]{%
+  \ifdefined\HCode
+    \HCode{<a class="publication-badge" href="#1"><img src="#2" alt="#3" /></a>}%
+  \else
+    \href{#1}{#3}%
+  \fi
+}
+
+\newcommand{\publicationdivider}{%
+  \ifdefined\HCode
+    \ifvmode\IgnorePar\fi\EndP
+    \HCode{<hr class="publication-divider" />}\ShowPar
+  \else
+    \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}%
   \fi
 }
