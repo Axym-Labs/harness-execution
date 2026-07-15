@@ -5,6 +5,9 @@ Store article and project-page sources as LaTeX. During each website build,
 embeds the resulting body fragment in the existing site shell. The generated
 HTML is not a standalone document and is not committed.
 
+- Personal website sources: `content/latex/posts/`
+- Axym website sources: `src/content/latex/work/`
+
 Begin each source with comment-prefixed YAML front matter, then use the shared
 package:
 
