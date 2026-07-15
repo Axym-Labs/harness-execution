@@ -14,7 +14,7 @@ extension.
 | `autoresearch-loop` | `exec-autoresearch-loop` | Explore scientific premise-testable ideas or blind downstream-search candidates reproducibly. |
 | `initiation` | `exec-initiation` | Establish lean project-local specification and scaffolding. |
 | `wrapup` | `exec-wrapup` | Clean, validate, document, package artifacts, and recommend publication paths. |
-| `publish-work` | `exec-publish-work` | Placeholder for publication and visibility work on completed projects. |
+| `publish-work` | `exec-publish-work` | Seed a publication task arc from an article, paper, or product template. |
 | `web-design-guidelines` | `exec-web-design-guidelines` | Review UI code against web interface guidelines. |
 
 `single-step-execution` is intentionally omitted: narrow work is covered

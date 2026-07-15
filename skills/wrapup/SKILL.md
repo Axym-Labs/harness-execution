@@ -54,9 +54,12 @@ and easy to reuse.
 
 ### Project Wrapup
 
+- Before a project-wide wrapup, create or reuse a dedicated task arc named
+  `wrapup`.
+- Brainstorm significant future work—not small fixes or incremental
+  improvements—and write it to `<task-arc-dir>/future-work.md`.
 - For a finished, publishable project, create a publishing task arc and
   continue it with `publish-work`.
-
 - When wrapping up a whole project rather than one task arc, think about making
   it usable by others, especially if it may be published or become a package.
   The biggest factor is ease of use: installation, first run, configuration,
