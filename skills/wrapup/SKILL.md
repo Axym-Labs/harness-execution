@@ -29,19 +29,17 @@ and easy to reuse.
   may include full-scale training/validation.
 - Generate plots or visualizations required to interpret or present results,
   storing deliverables and agent-produced artifacts in
-  `<project-dir>/docs/<task-arc>/artifacts/`.
+  `<task-arc-dir>/artifacts/`.
 - Add missing required metrics and reporting.
 - If the arc used iteration on a measurable metric, especially through
   `autoresearch-loop`, create a progress plot from
-  `docs/<task-arc>/progress.md`: metric value over iteration time, with time on
+  `<task-arc-dir>/progress.md`: metric value over iteration time, with time on
   the x axis. Use `sci-scientific-visualization`, store it in
-  `docs/<task-arc>/artifacts/`, and link it from the final progress entry. If
+  `<task-arc-dir>/artifacts/`, and link it from the final progress entry. If
   the progress file lacks enough structured metric data, record that limitation
   instead of inventing values.
-- For simple numeric CSV plots, use `scientific-visualization`'s bundled
-  `scripts/csv-plot.py` when it fits the data. For a project PDF wrapup, start
-  from this skill's bundled `assets/project-wrapup.tex` and render with
-  `entrypoint`'s bundled `scripts/render-pdf.sh`.
+- For a project PDF wrapup, start from this skill's bundled
+  `assets/project-wrapup.tex` and use an available local LaTeX renderer.
 - Write final README and documentation, including limitations and how claims
   are supported.
 - Ensure reproducibility (pinned dependencies, seed values, runnable checks).
@@ -55,6 +53,9 @@ and easy to reuse.
   time, time spent, feedback, worth it, and one-phrase core learning.
 
 ### Project Wrapup
+
+- For a finished, publishable project, create a publishing task arc and
+  continue it with `publish-work`.
 
 - When wrapping up a whole project rather than one task arc, think about making
   it usable by others, especially if it may be published or become a package.
@@ -94,5 +95,3 @@ and easy to reuse.
 4. Document known limitations honestly.
 5. Ensure someone else can reproduce the results.
 6. Insert new task-arc reflection rows at the top of the log table.
-7. Recommend outward-facing actions, but do not send email or publish a post
-   without the user's approval of the outward action.

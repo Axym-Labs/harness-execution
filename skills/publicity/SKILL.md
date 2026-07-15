@@ -13,8 +13,7 @@ description: Use when considering visibility, publicity, dissemination, or audie
 - Use `custom-search` first, including existing posts/content, to avoid
   duplicating prior messaging.
 - Do not take publicity actions from this skill. Output suggestions for the
-  user to approve, reject, or revise; public actions need the normal approval
-  path.
+  user to accept, reject, or revise.
 
 ## Actions To Consider
 
@@ -32,4 +31,4 @@ description: Use when considering visibility, publicity, dissemination, or audie
 ## Output
 
 Return a short prioritized list: action, audience, evidence/artifact to link,
-risk or approval needed, and expected value.
+risk or prerequisite, and expected value.

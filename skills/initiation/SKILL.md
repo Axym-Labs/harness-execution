@@ -13,24 +13,21 @@ Establish a lean project-local source of truth before implementation.
 
 1. Identify the goal, constraints, target directory (default
    `~/main/workspace/<name>`), and only the stack decisions needed to begin.
-2. When the project needs a separate internal repository for task arcs,
-   artifacts, or private notes, create `<name>-internal` as a **sibling** of
-   the primary repository. Never nest it at `<primary>/internal`. Keep the
-   primary and internal repositories private by default, and use the internal
-   sibling as `<project-dir>` for the remaining task-arc steps.
-3. Select a concise first task arc and create
-   `<project-dir>/docs/<task-arc>/spec.md` and `progress.md`. Preserve user
+2. Create or locate `<name>-internal` as a sibling of the primary repository;
+   never nest it at `<primary>/internal`. Keep it private by default.
+3. Select a concise first task arc and create it as a first-class child:
+   `<name>-internal/<task-arc>/spec.md` and `progress.md`. Preserve user
    requirements in the user-derived spec without treating it as a working log,
    record unresolved questions rather than silently choosing scope, and
    initialize progress with the established current state.
-4. Add `docs/<task-arc>/exploration.md` only when prior-work review, alternatives, or
+4. Add `<task-arc-dir>/exploration.md` only when prior-work review, alternatives, or
    premise validation materially informs the project. For scientific work use
    `scientific-work`; for a controlled empirical premise use `test-hypothesis`.
 5. Create only the scaffold needed for the next work mode. Add
-   `docs/<task-arc>/worker-report.md` only when a delegated worker needs its
+   `<task-arc-dir>/worker-report.md` only when a delegated worker needs its
    single durable handoff surface.
 6. Store generated project deliverables and agent artifacts under
-   `<project-dir>/docs/<task-arc>/artifacts/` when they are created.
+   `<task-arc-dir>/artifacts/` when they are created.
 7. Initialize or publish Git only when requested or already part of the
    agreed project workflow.
 8. Use `knowledge-organization` only for enduring insight, not to
@@ -48,5 +45,3 @@ Establish a lean project-local source of truth before implementation.
    `progress.md` for durable project progress.
 6. Make the repo private if it's for internal use. Example: A custom agent
    workflow or configuration.
-7. Place a separate `<name>-internal` repository beside its primary repository,
-   not inside it.

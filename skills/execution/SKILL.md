@@ -19,13 +19,13 @@ validation is underway.
 - Project name or path from user input
 - Default lookup: `~/main/workspace/<project-name>`
 - Verify directory exists
-- Use the task arc selected by `entrypoint`; ensure its
-  `docs/<task-arc>/spec.md` and `progress.md` exist before any project work
-- Read `docs/<task-arc>/spec.md` for requirements; it is the user-derived
+- Use the task arc selected by `entrypoint`; ensure
+  `<task-arc-dir>/spec.md` and `progress.md` exist before any project work
+- Read `<task-arc-dir>/spec.md` for requirements; it is the user-derived
   specification and should not be edited by default.
-- Read `docs/<task-arc>/exploration.md` when present for prior findings
-- Read `docs/<task-arc>/progress.md` for durable execution results
-- Read `docs/<task-arc>/worker-report.md` when delegated work used the worker-owned
+- Read `<task-arc-dir>/exploration.md` when present for prior findings
+- Read `<task-arc-dir>/progress.md` for durable execution results
+- Read `<task-arc-dir>/worker-report.md` when delegated work used the worker-owned
   handoff fallback; verify it before accepting or transferring results
 - Read `README.md` for current state
 - Check `git status` / `git log --oneline -10`
@@ -38,7 +38,7 @@ validation is underway.
 - Note completed items in progress
 - Identify next milestone or blocker
 - State the next milestone from the spec and record accepted material outcomes
-  in `docs/<task-arc>/progress.md`.
+  in `<task-arc-dir>/progress.md`.
 - Milestones record completed phases, meaningful verification, blockers, and
   final results, not a stream of command output.
 
@@ -80,7 +80,7 @@ validation is underway.
   checks, worker scope, and notification route.
 - Follow `supervising` when selecting Codex or Kimi. For file-based delegated
   work, ask the worker to maintain one worker-owned
-  `docs/<task-arc>/worker-report.md` and send a completion notification with
+  `<task-arc-dir>/worker-report.md` and send a completion notification with
   outcome, verification, and blockers.
 - Use `sessions_send` instead of the handoff file only after a live round-trip
   test has passed in the current runtime.
@@ -101,11 +101,11 @@ validation is underway.
 
 ### 6. Record And Report
 
-- Preserve `docs/<task-arc>/spec.md`; amend it only when the user changes or
+- Preserve `<task-arc-dir>/spec.md`; amend it only when the user changes or
   approves requirements.
-- After checking evidence, update Harness-owned `docs/<task-arc>/progress.md`
+- After checking evidence, update Harness-owned `<task-arc-dir>/progress.md`
   with material verified outcomes.
-- Store generated project artifacts in `docs/<task-arc>/artifacts/`; use
+- Store generated project artifacts in `<task-arc-dir>/artifacts/`; use
   `knowledge-organization` only for durable structured knowledge worth linking
   beyond project working state
 - Use `sci-scientific-visualization` when creating, polishing, or reviewing

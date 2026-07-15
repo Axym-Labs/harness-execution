@@ -14,15 +14,16 @@ extension.
 | `autoresearch-loop` | `exec-autoresearch-loop` | Explore scientific premise-testable ideas or blind downstream-search candidates reproducibly. |
 | `initiation` | `exec-initiation` | Establish lean project-local specification and scaffolding. |
 | `wrapup` | `exec-wrapup` | Clean, validate, document, package artifacts, and recommend publication paths. |
+| `publish-work` | `exec-publish-work` | Placeholder for publication and visibility work on completed projects. |
 | `web-design-guidelines` | `exec-web-design-guidelines` | Review UI code against web interface guidelines. |
 
 `single-step-execution` is intentionally omitted: narrow work is covered
 directly by `execution` plus `supervising`, and the
 former skill contained no domain-specific guidance.
 
-Each coherent project objective uses a task arc under `docs/<task-arc>/` with
-required `spec.md` and `progress.md`. Delegated workers currently report
-through one worker-owned `docs/<task-arc>/worker-report.md` file; Harness
+Each coherent project objective uses a selected task-arc directory with
+required `spec.md` and `progress.md`; `initiation` owns the placement rule.
+Delegated workers currently report through one worker-owned `worker-report.md` file; Harness
 verifies it before recording accepted progress. A live OpenClaw
 `sessions_send` round trip on May 26, 2026 skipped
 delivery, so session-message reporting remains conditional on a later

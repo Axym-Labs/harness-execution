@@ -29,15 +29,15 @@ Use this procedure even when little is known about the project.
 
 Identify the project directory from the request; when a new project has no
 specified location, default to `~/main/workspace/<project-name>`. Inspect the
-user request, repository state, README, and existing `docs/` task-arc
+user request, repository state, README, and existing internal task-arc
 directories before deciding the mode of work.
 
 ### Step 2: Select Or Create A Task Arc
 
-A task arc is a coherent objective represented by
-`docs/<task-arc>/spec.md` and `docs/<task-arc>/progress.md`. The spec is the
-user-derived requirement record; preserve it by default and put running results
-in progress.
+A task arc is a coherent objective represented by `spec.md` and `progress.md`
+in a selected task-arc directory. `initiation` owns its exact placement. The
+spec is the user-derived requirement record; preserve it by default and put
+running results in progress.
 
 1. If an existing task arc covers the same objective or the new request is a
    repair, extension, or verification of that objective, reuse that arc.
@@ -49,8 +49,8 @@ in progress.
    `progress.md` before working; preserve and incorporate existing
    requirements or accepted results, including small fixes.
 
-Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
-`docs/<task-arc>/artifacts/` for deliverables produced in that arc.
+Use `<task-arc-dir>/worker-report.md` for a file-based delegated handoff and
+`<task-arc-dir>/artifacts/` for deliverables produced in that arc.
 
 ### Step 3: Identify The Lifecycle Stage
 
@@ -79,7 +79,7 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 2. Before dispatching meaningful work, load the delegation contract and give
    the worker scope, acceptance checks, relevant files, and its report route.
 3. Keep project reports, exports, figures, and agent-produced deliverables in
-   the selected arc's `docs/<task-arc>/artifacts/`; use structured knowledge
+   the selected arc's `artifacts/`; use structured knowledge
    capture only for enduring cross-project material worth linking.
 4. Load `execution` before applying project directives found in the user's
    message.
@@ -91,10 +91,9 @@ Use `docs/<task-arc>/worker-report.md` for a file-based delegated handoff and
 - Upload or link important artifacts when the channel supports it; embed plots
   in PDF responses when possible.
 - For substantial PDF responses, start from this skill's bundled
-  `assets/response.tex` and render with `scripts/render-pdf.sh`, resolving both
-  paths from the directory containing this `SKILL.md`. For project-scoped work,
-  write the `.tex`, rendered PDF, and supporting assets to
-  `docs/<task-arc>/artifacts/`.
+  `assets/response.tex` and use an available local LaTeX renderer. For
+  project-scoped work, write the `.tex`, rendered PDF, and supporting assets to
+  the selected arc's `artifacts/`.
 - If the spec/progress does not already define the next step, suggest a small
   number of next-step options rather than a single vague continuation.
 

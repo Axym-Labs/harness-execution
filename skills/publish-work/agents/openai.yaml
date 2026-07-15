@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Work"
+  short_description: "Plan publication of completed work"
+  default_prompt: "Create and execute the publication task arc for this completed work."
