@@ -1,6 +1,6 @@
 # Harness Execution Skills
 
-Execution-oriented skills for the Kimi-Harness harness, kept outside the core
+Execution-oriented skills for the Harness, kept outside the core
 configuration repository so execution policy can evolve as a coherent
 extension.
 
@@ -30,7 +30,7 @@ successful runtime test.
 
 ## Integration
 
-The `kimi-harness` repository generates full-content namespaced runtime copies
+The `harness-primary` repository generates full-content namespaced runtime copies
 from this sibling checkout and loads those through OpenClaw's
 `skills.load.extraDirs` setting. This repository stores no credentials or
 project-specific output.
