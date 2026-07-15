@@ -16,3 +16,9 @@ An interactive element may instead follow the abstract when it needs the
 abstract to be understood. Extend the important-link row only when another
 artifact is useful. Condense the paper; do not turn the project page into a
 second, differently ordered paper.
+
+Use the shared `publication-web` primitives for this structure:
+`publicationhead`/`\makepublicationtitle`, `\publicationfigure`,
+`\publicationabstract`, and `\publicationactions` with `\publicationaction`.
+They preserve the ruled paper head, numbered caption, distinct abstract, and
+visible resource actions across PDF and HTML.
