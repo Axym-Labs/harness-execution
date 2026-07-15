@@ -61,21 +61,10 @@ and easy to reuse.
   it usable by others, especially if it may be published or become a package.
   The biggest factor is ease of use: installation, first run, configuration,
   examples, and reproducibility should require minimal guesswork.
-- Make results, evidence, and work more visible. Upload or link important
-  artifacts where appropriate, inspect plots before presenting them, and make
-  plots more meaningful or visually clear when the evidence deserves it.
 - Polish the README with `write-readme-writing`: put the most important thing for
   newcomers at the top, show the result or improvement rather than merely
   describing it, lead with the strongest material, move secondary details later,
   and omit reader-irrelevant internal history.
-- For research-like outputs, consider whether a preprint server, DOI, Zenodo
-  archive, or similar durable artifact route exists. Add a citation code block
-  near the bottom of the README, but not so far down that readers miss it.
-- Give the user a recommended numbered publishing/publicity plan whose scope
-  matches the size and maturity of the endeavor. A small internal result may
-  warrant a short visibility recommendation; a mature research contribution
-  may warrant an article on the personal website, arXiv/preprint release,
-  posts on X and LinkedIn, and a dedicated project information website/paper companion website.
 
 ## Output
 
@@ -84,7 +73,6 @@ and easy to reuse.
 - Complete documentation
 - Reproducible environment
 - Updated `$VAULT_PATH/Knowledge/task-arc-reflection-log.md`
-- A numbered dissemination plan with prerequisites and recommended order
 
 ## Rules
 
