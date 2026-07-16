@@ -15,6 +15,10 @@ project page embedded in the personal or Axym website, use the shared pipeline
 in [`references/latex-to-html.md`](references/latex-to-html.md); the renderer
 and website-facing assets in this skill are the canonical implementation.
 
+Before closing the publication arc, decide whether the project merits a CV
+entry based on its scope, size, evidentiary strength, and distinctiveness. Use
+`write-cv` to add or update the entry when warranted.
+
 ## Placement
 
 - Publish solo-authored research, technical essays, exploratory work, and work
